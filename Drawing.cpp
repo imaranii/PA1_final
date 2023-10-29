@@ -25,28 +25,28 @@
                 };
 
 		void Drawing::print_all(){
-			for(int i = 0 ; i < shapes->List::size() ; i++){
-				shapes->List::get(i)->print();
+			for(int i = 0 ; i < shapes->size() ; i++){
+				shapes->get(i)->print();
 			};
 		};
 		
 		
 		double Drawing::get_area_all_circles(){
 			double total = 0 ;
-			for(int i = 0 ; i < shapes->List::size() ; i++){
-                                Circle* circles = dynamic_cast<Circle*>(shapes->List::get(i));
+			for(int i = 0 ; i < shapes->size() ; i++){
+                                Circle* circles = dynamic_cast<Circle*>(shapes->get(i));
 				if(circles != nullptr){
-					total += circles->Shape::area();
+					total += circles->area();
                         	};
 			};
 			return total;
 		};
 
 		void Drawing::move_squares(double incX, double incY){
-			for(int i = 0 ; i < shapes->List::size() ; i++){
-                                Square* squares = dynamic_cast<Square*>(shapes->List::get(i));
+			for(int i = 0 ; i < shapes->size() ; i++){
+                                Square* squares = dynamic_cast<Square*>(shapes->get(i));
                                 if(squares != nullptr){
-                                        squares->Shape::translate(incX , incY);
+                                        squares->translate(incX , incY);
 				};
 			};
 
