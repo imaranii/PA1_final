@@ -10,7 +10,7 @@
 #include "Node.h"
 #include "Circle.h"
 
-class Drawing : public Square {
+class Drawing{
 	private:
 		List<Shape*>* shapes;
 	
